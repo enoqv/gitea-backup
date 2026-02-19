@@ -15,4 +15,4 @@ RUN apk add --no-cache \
     bzip2 \
     xz \
     restic \
-    postgresql-client
+    postgresql18-client
