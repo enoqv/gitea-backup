@@ -1,5 +1,11 @@
 FROM alpine:3.23.3
 
+# Install the tzdata package
+RUN apk add --no-cache tzdata
+
+# Set the Timezone environment variable to your desired location (e.g., America/New_York)
+ENV TZ=UTC
+
 RUN apk add --no-cache \
     bash \
     curl \
