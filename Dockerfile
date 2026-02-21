@@ -8,6 +8,7 @@ ENV TZ=UTC
 
 # Install required packages (removed duplicate entries)
 RUN apk add --no-cache \
+    tini \
     bash \
     curl \
     jq \
@@ -34,3 +35,5 @@ RUN chown -R backupuser:backupgroup /home/backupuser
 
 # Switch to the non-root user
 USER backupuser
+
+ENTRYPOINT ["/sbin/tini", "-v", "--"]
