@@ -20,7 +20,8 @@ RUN apk add --no-cache \
     zip \
     unzip \
     restic \
-    postgresql18-client
+    postgresql18-client \
+    supercronic
 
 ENV DOCKERIZE_VERSION=0.10.1
 RUN wget -nv -O - "https://github.com/jwilder/dockerize/releases/download/v${DOCKERIZE_VERSION}/dockerize-alpine-linux-amd64-v${DOCKERIZE_VERSION}.tar.gz" | tar -xz -C /usr/local/bin/ -f -
